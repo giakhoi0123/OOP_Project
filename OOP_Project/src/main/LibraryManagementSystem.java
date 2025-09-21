@@ -116,18 +116,27 @@ public class LibraryManagementSystem {
     }
 
     // Xử lý thanh toán
-    private static void processPayments(PaymentService paymentService, Scanner scanner) {
-        System.out.println("\n--- Xử lý thanh toán ---");
-        System.out.println("1. Thanh toán tiền phạt");
-        System.out.print("Chọn chức năng: ");
-        int choice = scanner.nextInt();
+private static void processPayments(PaymentService paymentService, Scanner scanner) {
+    System.out.println("\n--- Xử lý thanh toán ---");
+    System.out.println("1. Thanh toán tiền phạt");
+    System.out.println("2. Xem lịch sử thanh toán");
+    System.out.println("3. Tính tổng tiền phạt");
+    System.out.print("Chọn chức năng: ");
+    int choice = scanner.nextInt();
+    scanner.nextLine(); // Đọc bỏ dòng thừa
 
-        switch (choice) {
-            case 1:
-                paymentService.processFinePayment();
-                break;
-            default:
-                System.out.println("Lựa chọn không hợp lệ.");
-        }
+    switch (choice) {
+        case 1:
+            paymentService.processFinePayment();
+            break;
+        case 2:
+            paymentService.viewPaymentHistory();
+            break;
+        case 3:
+            paymentService.calculateTotalFine();
+            break;
+        default:
+            System.out.println("Lựa chọn không hợp lệ.");
     }
+}
 }

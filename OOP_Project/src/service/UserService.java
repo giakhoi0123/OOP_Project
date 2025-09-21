@@ -1,28 +1,49 @@
-// src/service/UserService.java
 package service;
 
-import model.Reader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import model.Reader;
 
 public class UserService {
     private List<Reader> readers = new ArrayList<>();
+    private Scanner scanner = new Scanner(System.in);
 
     // Thêm người dùng
     public void addUser() {
-        // Tạo người dùng mẫu (có thể thay bằng nhập từ người dùng)
-        Reader reader = new Reader("user1", "password1", "R001");
+        System.out.println("\n--- Thêm người dùng mới ---");
+        System.out.print("Nhập tên người dùng: ");
+        String username = scanner.nextLine();
+        System.out.print("Nhập mật khẩu: ");
+        String password = scanner.nextLine();
+        System.out.print("Nhập ID người dùng: ");
+        String readerId = scanner.nextLine();
+
+        Reader reader = new Reader(username, password, readerId);
         readers.add(reader);
-        System.out.println("Đã thêm người dùng: " + reader.getUsername());
+
+        System.out.println("Đã thêm người dùng thành công: " + reader.getUsername());
     }
 
     // Xóa người dùng
     public void deleteUser() {
-        if (readers.isEmpty()) {
-            System.out.println("Không có người dùng nào để xóa.");
-            return;
+        System.out.println("\n--- Xóa người dùng ---");
+        System.out.print("Nhập ID người dùng cần xóa: ");
+        String readerId = scanner.nextLine();
+
+        Reader readerToRemove = null;
+        for (Reader reader : readers) {
+            if (reader.getReaderId().equals(readerId)) {
+                readerToRemove = reader;
+                break;
+            }
         }
-        readers.remove(0); // Xóa người dùng đầu tiên (chỉ là ví dụ)
-        System.out.println("Đã xóa người dùng đầu tiên trong danh sách.");
+
+        if (readerToRemove != null) {
+            readers.remove(readerToRemove);
+            System.out.println("Đã xóa người dùng: " + readerToRemove.getUsername());
+        } else {
+            System.out.println("Không tìm thấy người dùng với ID: " + readerId);
+        }
     }
 }
