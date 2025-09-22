@@ -47,15 +47,15 @@ LibraryManagementSystem/
 
 ## 🚀 Cách chạy dự án
 
-### 1️⃣ Biên dịch tất cả các file:
+### 1. Biên dịch tất cả các file:
 ```bash
 cd src
 javac main/LibraryManagementSystem.java model/*.java service/*.java
-
-### 2️⃣ Biên dịch tất cả các file:
+```
+### 2. Chạy file:
 ```bash
 java main.LibraryManagementSystem
-
+```
 ## Yêu cầu môi trường
 Java JDK 17 trở lên
 IDE: IntelliJ IDEA hoặc VSCode hoặc Eclipse
