@@ -10,4 +10,17 @@ public class Staff extends UserAccount {
     }
 
     // Getters, setters, toString()
+    public String getStaffId() {
+        return staffId;
+    }
+    public void setStaffId(String staffId) {
+        this.staffId = staffId;
+    }
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "staffId='" + staffId + '\'' +
+                ", username='" + getUsername() + '\'' +
+                '}';
+    }
 }

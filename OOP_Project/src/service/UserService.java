@@ -46,4 +46,9 @@ public class UserService {
             System.out.println("Không tìm thấy người dùng với ID: " + readerId);
         }
     }
+
+    // Lấy tổng số người dùng
+    public int getTotalUsers() {
+        return readers.size();
+    }
 }

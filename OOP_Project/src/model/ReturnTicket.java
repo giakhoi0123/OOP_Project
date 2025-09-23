@@ -15,4 +15,13 @@ public class ReturnTicket {
     }
 
     // Getters, setters, toString()
+    public String getTicketId() {
+        return ticketId;
+    }
+    public void setTicketId(String ticketId) {
+        this.ticketId = ticketId;
+    }
+    public LoanTicket getLoanTicket() {
+        return loanTicket;
+    }
 }

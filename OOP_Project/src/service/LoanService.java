@@ -1,13 +1,12 @@
 // src/service/LoanService.java
 package service;
 
-import model.Book;
-import model.LoanTicket;
-import model.Reader;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import model.Book;
+import model.LoanTicket;
+import model.Reader;
 
 public class LoanService {
     private List<LoanTicket> loanTickets = new ArrayList<>();
@@ -30,5 +29,9 @@ public class LoanService {
         }
         LoanTicket ticket = loanTickets.remove(0); // Xử lý phiếu mượn đầu tiên (chỉ là ví dụ)
         System.out.println("Đã xử lý trả sách cho phiếu: " + ticket.getTicketId());
+    }
+    // Lấy số lượng phiếu mượn
+    public int getTotalLoans() {
+        return loanTickets.size();
     }
 }

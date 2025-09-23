@@ -10,5 +10,12 @@ public class Librarian extends Staff {
         System.out.println("Managing books.");
     }
 
-    // Additional methods
+    // to string
+    @Override
+    public String toString() {
+        return "Librarian{" +
+                "staffId='" + getStaffId() + '\'' +
+                ", username='" + getUsername() + '\'' +
+                '}';
+    }
 }

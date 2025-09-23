@@ -3,9 +3,9 @@ package main;
 import java.util.Scanner;
 import service.BookService;
 import service.LoanService;
+import service.NotificationService;
 import service.PaymentService;
 import service.UserService;
-
 public class LibraryManagementSystem {
     public static void main(String[] args) {
         // Khởi tạo các service
@@ -13,7 +13,7 @@ public class LibraryManagementSystem {
         UserService userService = new UserService();
         LoanService loanService = new LoanService();
         PaymentService paymentService = new PaymentService();
-
+        NotificationService notificationService = new NotificationService();
         try (Scanner scanner = new Scanner(System.in)) {
             int luaChon;
             do {
@@ -22,6 +22,8 @@ public class LibraryManagementSystem {
                 System.out.println("2. Quản lý người dùng");
                 System.out.println("3. Quản lý mượn/trả");
                 System.out.println("4. Xử lý thanh toán");
+                System.out.println("5. Thống kê");
+                System.out.println("6. Gửi thông báo");
                 System.out.println("0. Thoát");
                 System.out.print("Chọn chức năng: ");
                 luaChon = scanner.nextInt();
@@ -31,6 +33,8 @@ public class LibraryManagementSystem {
                     case 2 -> quanLyNguoiDung(userService, scanner);
                     case 3 -> quanLyMuonTra(loanService, scanner);
                     case 4 -> xuLyThanhToan(paymentService, scanner);
+                    case 5 -> thongKe(bookService, userService, loanService);
+                    case 6 -> guiThongBao(notificationService, scanner);
                     case 0 -> System.out.println("Thoát chương trình. Tạm biệt!");
                     default -> System.out.println("Lựa chọn không hợp lệ. Vui lòng thử lại.");
                 }
@@ -102,4 +106,44 @@ public class LibraryManagementSystem {
             default -> System.out.println("Lựa chọn không hợp lệ.");
         }
     }
+    // Thống kê
+private static void thongKe(BookService bookService, UserService userService, LoanService loanService) {
+    System.out.println("\n--- Thống kê ---");
+    int soLuongSach = bookService.getTotalBooks();
+    int soLuongNguoiDung = userService.getTotalUsers();
+    int soLuongSachDangMuon = loanService.getTotalLoans();
+
+    System.out.println("Số lượng sách: " + soLuongSach);
+    System.out.println("Số lượng người dùng: " + soLuongNguoiDung);
+    System.out.println("Số lượng sách đang được mượn: " + soLuongSachDangMuon);
+}
+
+// Gửi thông báo
+private static void guiThongBao(NotificationService notificationService, Scanner scanner) {
+    System.out.println("\n--- Gửi thông báo ---");
+    System.out.println("1. Gửi thông báo mượn sách");
+    System.out.println("2. Gửi thông báo trả sách");
+    System.out.println("3. Xem lịch sử thông báo");
+    System.out.print("Chọn chức năng: ");
+    int luaChon = scanner.nextInt();
+    scanner.nextLine(); // bỏ dòng thừa
+
+    if (luaChon == 3) {
+        notificationService.readNotifications();
+        return;
+    }
+
+    System.out.print("Nhập tên người dùng: ");
+    String tenNguoiDung = scanner.nextLine();
+    System.out.print("Nhập tên sách: ");
+    String tenSach = scanner.nextLine();
+
+    if (luaChon == 1) {
+        notificationService.sendNotification("Mượn", tenNguoiDung, tenSach);
+    } else if (luaChon == 2) {
+        notificationService.sendNotification("Trả", tenNguoiDung, tenSach);
+    } else {
+        System.out.println("Lựa chọn không hợp lệ.");
+    }
+}
 }

@@ -67,13 +67,13 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", author=" + author +
-                ", publisher=" + publisher +
-                ", category=" + category +
-                ", isAvailable=" + isAvailable +
-                '}';
+    return "Book {" +
+            "Mã sách='" + id + '\'' +
+            ", Tên sách='" + title + '\'' +
+            ", Tác giả='" + author + '\'' +
+            ", Nhà XB='" + publisher + '\'' +
+            ", Thể loại='" + category + '\'' +
+            ", Còn sẵn='" + (isAvailable ? "Có" : "Không") + '\'' +
+            '}';
     }
 }

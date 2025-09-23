@@ -10,4 +10,13 @@ public class Inventory {
     }
 
     // Getters, setters, toString()
+    public int getTotalBooks() {
+        return totalBooks;
+    }
+    public void setTotalBooks(int totalBooks) {
+        this.totalBooks = totalBooks;
+    }
+    public int getAvailableBooks() {
+        return availableBooks;
+    }
 }

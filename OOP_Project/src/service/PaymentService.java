@@ -76,4 +76,9 @@ public class PaymentService {
         }
         System.out.println("Tổng số tiền phạt đã thanh toán: " + total);
     }
+
+    // Lấy số lượng giao dịch thanh toán
+    public int getPaymentCount() {
+        return paymentHistory.size();
+    }
 }

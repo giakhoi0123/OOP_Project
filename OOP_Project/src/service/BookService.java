@@ -80,4 +80,7 @@ public class BookService {
             System.out.println("Không tìm thấy sách nào với tên: " + title);
         }
     }
+    public int getTotalBooks() {
+        return books.size();
+    }
 }
