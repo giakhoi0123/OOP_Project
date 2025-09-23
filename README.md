@@ -5,35 +5,35 @@ Dự án **Hệ thống Quản lý Thư viện** được xây dựng bằng **J
 ---
 
 ## 🏗 Cấu trúc thư mục
-<pre> ```bash 
+<pre> 
 LibraryManagementSystem/
 ├── src/ 
 │ ├── main/
 │ │ ├── LibraryManagementSystem.java
 │ ├── model/
-│ │ │ │ ├── Book.java
-│ │ │ │ ├── Author.java
-│ │ │ │ ├── Publisher.java
-│ │ │ │ ├── Category.java
-│ │ │ │ ├── Reader.java
-│ │ │ │ ├── Staff.java
-│ │ │ │ ├── Librarian.java
-│ │ │ │ ├── LoanTicket.java
-│ │ │ │ ├── ReturnTicket.java
-│ │ │ │ ├── Inventory.java
-│ │ │ │ ├── Fine.java
-│ │ │ │ ├── Statistics.java
-│ │ │ │ ├── Notification.java
-│ │ │ │ ├── Payment.java
-│ │ │ │ ├── UserAccount.java
-│ │ ├── service/ 
-│ │ │ │ ├── BookService.java
-│ │ │ │ ├── ReaderService.java 
-│ │ │ │ ├── LoanService.java
-│ │ │ │ ├── ReturnService.java
-│ │ │ │ ├── PaymentService.java
-│ │ │ │ ├── NotificationService.java 
-``` </pre>
+│ │ ├── Book.java
+│ │ ├── Author.java
+│ │ ├── Publisher.java
+│ │ ├── Category.java
+│ │ ├── Reader.java
+│ │ ├── Staff.java
+│ │ ├── Librarian.java
+│ │ ├── LoanTicket.java
+│ │ ├── ReturnTicket.java
+│ │ ├── Inventory.java
+│ │ ├── Fine.java
+│ │ ├── Statistics.java
+│ │ ├── Notification.java
+│ │ ├── Payment.java
+│ │ ├── UserAccount.java
+│ ├── service/ 
+│ │ ├── BookService.java
+│ │ ├── ReaderService.java 
+│ │ ├── LoanService.java
+│ │ ├── ReturnService.java
+│ │ ├── PaymentService.java
+│ │ ├── NotificationService.java 
+</pre>
 
 ---
 
