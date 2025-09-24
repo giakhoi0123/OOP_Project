@@ -58,7 +58,7 @@ javac -d out $(find src -name "*.java")
 ```
 ### 2. Chạy file:
 ```bash
-java main.LibraryManagementSystem
+java main.main
 ```
 ## Yêu cầu môi trường
 Java JDK 17 trở lên
