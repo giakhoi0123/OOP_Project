@@ -2,7 +2,11 @@ package service;
 
 import java.io.*;
 
-public class NotificationService {
+interface INotificationService {
+    void sendNotification(String loaiThongBao, String tenNguoiDung, String tenSach);
+    void readNotifications();
+}
+public class NotificationService implements INotificationService{
     private static final String FILE_NAME = "thongbao.txt";
 
     // Gửi thông báo và lưu vào file

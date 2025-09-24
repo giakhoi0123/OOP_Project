@@ -5,7 +5,12 @@ import java.util.List;
 import java.util.Scanner;
 import model.Reader;
 
-public class UserService {
+interface IUserService {
+    void addUser();
+    void deleteUser();
+    int getTotalUsers();
+}
+public class UserService implements IUserService {
     private List<Reader> readers = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
 

@@ -1,11 +1,7 @@
 package main;
 
 import java.util.Scanner;
-import service.BookService;
-import service.LoanService;
-import service.NotificationService;
-import service.PaymentService;
-import service.UserService;
+import service.*;
 public class LibraryManagementSystem {
     public static void main(String[] args) {
         // Khởi tạo các service

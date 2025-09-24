@@ -5,7 +5,13 @@ import java.util.List;
 import java.util.Scanner;
 import model.Fine;
 
-public class PaymentService {
+interface IPaymentService {
+    void processFinePayment();
+    void viewPaymentHistory();
+    void calculateTotalFine();
+    int getPaymentCount();
+}
+public class PaymentService implements IPaymentService {
     private Scanner scanner = new Scanner(System.in);
     private List<Fine> paymentHistory = new ArrayList<>(); // Lưu lịch sử thanh toán
 

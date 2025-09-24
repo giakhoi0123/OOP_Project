@@ -8,7 +8,13 @@ import model.Book;
 import model.Category;
 import model.Publisher;
 
-public class BookService {
+interface IBookService {
+    void addBook();
+    void deleteBook();
+    void searchBook();
+    int getTotalBooks();
+}
+public class BookService implements IBookService {
     private List<Book> books = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
 
@@ -80,7 +86,10 @@ public class BookService {
             System.out.println("Không tìm thấy sách nào với tên: " + title);
         }
     }
+
+    // Lấy tổng số lượng sách
     public int getTotalBooks() {
         return books.size();
     }
+
 }

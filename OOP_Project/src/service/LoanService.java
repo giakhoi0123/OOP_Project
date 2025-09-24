@@ -8,7 +8,12 @@ import model.Book;
 import model.LoanTicket;
 import model.Reader;
 
-public class LoanService {
+interface ILoanService {
+    void issueLoan();
+    void processReturn();
+    int getTotalLoans();
+}
+public class LoanService implements ILoanService {
     private List<LoanTicket> loanTickets = new ArrayList<>();
 
     // Cấp phiếu mượn sách
