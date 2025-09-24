@@ -8,8 +8,10 @@ Dự án **Hệ thống Quản lý Thư viện** được xây dựng bằng **J
 <pre> 
 LibraryManagementSystem/
 ├── src/ 
+│ ├── LibraryManagementSystem/
+│ │ ├── menu.java
 │ ├── main/
-│ │ ├── LibraryManagementSystem.java
+│ │ ├── main.java
 │ ├── model/
 │ │ ├── Book.java
 │ │ ├── Author.java
@@ -51,8 +53,8 @@ LibraryManagementSystem/
 
 ### 1. Biên dịch tất cả các file:
 ```bash
-cd src
-javac main/LibraryManagementSystem.java model/*.java service/*.java
+cd OOP_Project
+javac -d out $(find src -name "*.java")
 ```
 ### 2. Chạy file:
 ```bash
