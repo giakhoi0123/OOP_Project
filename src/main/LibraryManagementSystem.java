@@ -5,12 +5,12 @@ import service.BookService;
 import service.LoanService;
 import service.NotificationService;
 import service.PaymentService;
-import service.UserService;
+import service.ReaderService;
 public class LibraryManagementSystem {
     public static void main(String[] args) {
         // Khởi tạo các service
         BookService bookService = new BookService();
-        UserService userService = new UserService();
+        ReaderService userService = new ReaderService();
         LoanService loanService = new LoanService();
         PaymentService paymentService = new PaymentService();
         NotificationService notificationService = new NotificationService();
@@ -60,7 +60,7 @@ public class LibraryManagementSystem {
     }
 
     // Quản lý người dùng
-    private static void quanLyNguoiDung(UserService userService, Scanner scanner) {
+    private static void quanLyNguoiDung(ReaderService userService, Scanner scanner) {
         System.out.println("\n--- Quản lý người dùng ---");
         System.out.println("1. Thêm người dùng");
         System.out.println("2. Xóa người dùng");
@@ -107,7 +107,7 @@ public class LibraryManagementSystem {
         }
     }
     // Thống kê
-private static void thongKe(BookService bookService, UserService userService, LoanService loanService) {
+private static void thongKe(BookService bookService, ReaderService userService, LoanService loanService) {
     System.out.println("\n--- Thống kê ---");
     int soLuongSach = bookService.getTotalBooks();
     int soLuongNguoiDung = userService.getTotalUsers();
