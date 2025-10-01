@@ -1,14 +1,31 @@
 // src/model/Staff.java
 package model;
 
-public class Staff extends UserAccount {
+public class Staff {
     private String staffId;
-
-    public Staff(String username, String password, String staffId) {
-        super(username, password);
-        this.staffId = staffId;
+    private String name;
+    private String birth;
+    private String address;
+    
+    public Staff() {
     }
-
+    public Staff(String name, String birth, String address, String staffId) {
+        this.name = name;
+        this.staffId = staffId;
+        this.birth = birth;
+        this.address = address;
+    }
+    public void nhap() {
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        System.out.print("Nhập mã nhân viên: ");
+        staffId = scanner.nextLine();
+        System.out.print("Nhập tên nhân viên: ");
+        name = scanner.nextLine();
+        System.out.print("Nhập ngày sinh nhân viên: ");
+        birth = scanner.nextLine();
+        System.out.print("Nhập địa chỉ nhân viên: ");
+        address = scanner.nextLine();
+    }
     // Getters, setters, toString()
     public String getStaffId() {
         return staffId;
@@ -18,9 +35,6 @@ public class Staff extends UserAccount {
     }
     @Override
     public String toString() {
-        return "Staff{" +
-                "staffId='" + staffId + '\'' +
-                ", username='" + getUsername() + '\'' +
-                '}';
+        return "Staff{staffId='" + staffId + "', name='" + name + "', birth='" + birth + "', address='" + address + "'}";
     }
 }

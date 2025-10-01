@@ -3,20 +3,40 @@ package model;
 public class Book {
     private String id;
     private String title;
-    private Author author;
-    private Publisher publisher;
-    private Category category;
+    private String authorID;
+    private String publisherID;
+    private String categoryID;
+    private String supplierID;
     private boolean isAvailable;
-
-    public Book(String id, String title, Author author, Publisher publisher, Category category) {
+    public Book() {
+    }
+    public Book(String id, String title, String authorID, String publisherID, String categoryID, String supplierID,boolean isAvailable) {
         this.id = id;
         this.title = title;
-        this.author = author;
-        this.publisher = publisher;
-        this.category = category;
+        this.authorID = authorID;
+        this.publisherID = publisherID;
+        this.categoryID = categoryID;
         this.isAvailable = true;
     }
 
+    public void nhap() {
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        System.out.print("Nhập mã sách: ");
+        id = scanner.nextLine();
+        System.out.print("Nhập tiêu đề sách: ");
+        title = scanner.nextLine();
+        System.out.print("Nhập mã tác giả: ");
+        authorID = scanner.nextLine();
+        System.out.print("Nhập mã nhà xuất bản: ");
+        publisherID = scanner.nextLine();
+        System.out.print("Nhập mã thể loại: ");
+        categoryID = scanner.nextLine();
+        System.out.print("Nhập mã nhà cung cấp: ");
+        supplierID = scanner.nextLine();
+        System.out.print("Sách có sẵn (true/false): ");
+        isAvailable = scanner.nextBoolean();
+        scanner.close();
+    }
     public String getId() {
         return id;
     }
@@ -33,28 +53,36 @@ public class Book {
         this.title = title;
     }
 
-    public Author getAuthor() {
-        return author;
+    public String getAuthorId() {
+        return authorID;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthorId(String authorID) {
+        this.authorID = authorID;
     }
 
-    public Publisher getPublisher() {
-        return publisher;
+    public String getPublisherId() {
+        return publisherID;
     }
 
-    public void setPublisher(Publisher publisher) {
-        this.publisher = publisher;
+    public void setPublisherId(String publisherID) {
+        this.publisherID = publisherID;
     }
 
-    public Category getCategory() {
-        return category;
+    public String getCategoryId() {
+        return categoryID;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategoryId(String categoryID) {
+        this.categoryID = categoryID;
+    }
+
+    public String getSupplierId() {
+        return supplierID;
+    }
+    
+    public void setSupplierId(String supplierID) {
+        this.supplierID = supplierID;
     }
 
     public boolean isAvailable() {
@@ -67,13 +95,13 @@ public class Book {
 
     @Override
     public String toString() {
-    return "Book {" +
-            "Mã sách='" + id + '\'' +
-            ", Tên sách='" + title + '\'' +
-            ", Tác giả='" + author + '\'' +
-            ", Nhà XB='" + publisher + '\'' +
-            ", Thể loại='" + category + '\'' +
-            ", Còn sẵn='" + (isAvailable ? "Có" : "Không") + '\'' +
-            '}';
+        return "Book{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", authorID='" + authorID + '\'' +
+                ", publisherID='" + publisherID + '\'' +
+                ", categoryID='" + categoryID + '\'' +
+                ", isAvailable=" + isAvailable +
+                '}';
     }
 }
