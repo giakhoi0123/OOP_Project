@@ -1,0 +1,20 @@
+Novel,N001,Mắt Biếc,A001,P001,C001,S001,true,120000,15,Lãng Mạn,Tiếng Việt
+Text_Book,T001,Toán 10 Nâng Cao,A003,P004,C009,S002,true,80000,25,SGK,10
+NormalBook,R001,Nhà Giả Kim,A006,P003,C006,S003,true,95000,30,Bìa Mềm,250
+Novel,N002,Harry Potter 1,A003,P003,C002,S004,true,200000,20,Giả Tưởng,Tiếng Anh
+Text_Book,T002,Văn Học 11,A002,P004,C009,S002,true,90000,18,Sách Bài Tập,11
+NormalBook,R002,Đắc Nhân Tâm,A004,P005,C007,S005,false,150000,0,Bìa Cứng,300
+Novel,N003,Ông Già và Biển Cả,A007,P002,C006,S006,true,110000,12,Kinh Điển,Tiếng Anh
+Text_Book,T003,Tiếng Anh 12,A001,P004,C009,S002,true,75000,22,SGK,12
+NormalBook,R003,Kinh Tế Vi Mô,A005,P007,C003,S007,true,250000,8,Bìa Mềm,400
+Novel,N004,Rừng Na Uy,A008,P002,C006,S008,true,135000,10,Tâm Lý,Tiếng Nhật
+Novel,N005,Chí Phèo,A011,P002,C001,S001,true,85000,28,Hiện Thực,Tiếng Việt
+Text_Book,T004,Hóa Học 11,A005,P004,C009,S002,true,70000,20,SGK,11
+NormalBook,R004,1984,A016,P003,C005,S004,true,180000,14,Bìa Cứng,350
+Novel,N006,Trăm Năm Cô Đơn,A017,P003,C006,S003,true,220000,7,Ma Thuật Hiện Thực,Tiếng Tây Ban Nha
+Text_Book,T005,Vật Lý 12,A004,P004,C009,S002,true,85000,16,Sách Bài Tập,12
+NormalBook,R005,Tội Ác Và Hình Phạt,A018,P002,C006,S006,true,280000,5,Bìa Mềm,600
+Novel,N007,Số Đỏ,A012,P001,C001,S001,true,95000,19,Hiện Thực,Tiếng Việt
+Text_Book,T006,Sinh Học 10,A002,P004,C009,S002,true,65000,24,SGK,10
+NormalBook,R006,Mrs Dalloway,A019,P003,C006,S005,true,160000,11,Bìa Mềm,280
+Novel,N008,Chiến Tranh Và Hòa Bình,A020,P002,C005,S008,true,350000,3,Sử Thi,Tiếng Nga

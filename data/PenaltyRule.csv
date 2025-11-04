@@ -1,0 +1,10 @@
+RS001,Trả muộn 1-3 ngày,5000.0
+RS002,Trả muộn 4-7 ngày,10000.0
+RS003,Trả muộn > 7 ngày,20000.0
+RS004,Làm mất sách,500000.0
+RS005,Làm hư hỏng nhẹ,50000.0
+RS006,Làm hư hỏng nặng,250000.0
+RS007,Mất thẻ thư viện,100000.0
+RS008,Không tuân thủ quy định,10000.0
+RS009,Làm mất sách quý hiếm,1000000.0
+RS010,Khác,5000.0
